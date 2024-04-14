@@ -39,7 +39,7 @@ jobs:
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
       - name: Pylint
         run: |
-          pylint $(git ls-files --[no-]ignored '*.py')
+          pylint $(git ls-files --ignored '*.py')
           nbqa pylint $(git ls-files '*.ipynb')
       - name: isort
         run: |
